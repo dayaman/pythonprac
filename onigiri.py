@@ -3,9 +3,9 @@ import random
 def onigiri():
     
     try:
-        fp = open('ongrct.txt', 'r')
-        on = int(fp.read())
-        fp.close()
+        with open('ongrct.txt', 'r') as fp: 
+            on = int(fp.read())
+            #fp.close()
     except:
         on = 0
         
@@ -22,15 +22,15 @@ def onigiri():
 　　　　   　（＿)し'  し(＿）（＿）＿）''')
     else:
         print(on,'回目のおにぎりです。')
-    fw = open('ongrct.txt', 'w')
-    fw.write(str(on))
-    fw.close()
+    with open('ongrct.txt', 'w') as fw:
+        fw.write(str(on))
+        #fw.close()
 
 def main():
 
-    num = random.randint(1, 100)
+    num = random.randint(1, 5)
 
-    if num % 5 == 0:
+    if num  == 5:
         print('おにぎり')
         onigiri()
     else :
