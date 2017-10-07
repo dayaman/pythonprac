@@ -1,5 +1,5 @@
 def main():
-    say = input("Tweet:")
+    say = input('Tweet:')
     if say == 'おっぱい':
         print('Mention from そらそら「腰」')
 
